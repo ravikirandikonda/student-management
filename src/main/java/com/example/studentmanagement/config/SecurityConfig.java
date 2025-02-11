@@ -23,8 +23,8 @@ public class SecurityConfig {
 	    http
 	        .csrf().disable()
 	        .authorizeHttpRequests(auth -> auth
-	            .requestMatchers("/auth/login/admin").permitAll()  // Allow login
-	            .requestMatchers("/admin/**").hasRole("ADMIN")  // Restrict admin routes
+	            .requestMatchers("/auth/login/admin").permitAll() 
+	            .requestMatchers("/admin/**").hasRole("ADMIN")  
 	            .requestMatchers("/student/**").hasRole("STUDENT")
 	            .anyRequest().permitAll()
 	        )
