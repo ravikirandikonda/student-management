@@ -14,7 +14,7 @@ public class StudentAddress {
     private String state;
     private String district;
     private String pincode;
-    private String addressType; // Permanent, Correspondence, Current
+    private String addressType; 
 
     @ManyToOne
     @JoinColumn(name = "student_id")
