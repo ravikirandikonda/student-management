@@ -31,7 +31,7 @@ public class AdminController {
         return ResponseEntity.ok("Student added successfully!");
     }
 
-    @PutMapping("/admin/students/{id}") // Changed URL
+    @PutMapping("/admin/students/{id}")
     public ResponseEntity<String> updateStudent(@PathVariable Long id, @RequestBody Student student, HttpSession session) {
         if (!isAdmin(session)) return ResponseEntity.status(403).body("Access Denied!");
         studentService.updateStudent(id, student);
