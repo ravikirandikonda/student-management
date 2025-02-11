@@ -22,12 +22,12 @@ public class Student {
     private String name;
 
     @Column(nullable = false)
-    private LocalDate dateOfBirth; // Changed from String to LocalDate
+    private LocalDate dateOfBirth; 
 
     @Column(unique = true, nullable = false)
     private String email;
 
-    @Column(nullable = false, length = 15) // Ensured valid mobile number length
+    @Column(nullable = false, length = 15)
     private String mobile;
 
     @Column(nullable = false)
